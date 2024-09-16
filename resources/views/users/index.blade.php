@@ -5,15 +5,54 @@
     <div class="row">
         <div class="col-md-12">
             @if(session('success'))
-            <div class="alert alert-success text-center">
-                {{ session('success') }}
-            </div>
-        @elseif(session('error'))
-            <div class="alert alert-danger text-center">
-                {{ session('error') }}
-            </div>
-        @endif
+                <div class="alert alert-success text-center">
+                    {{ session('success') }}
+                </div>
+            @elseif(session('error'))
+                <div class="alert alert-danger text-center">
+                    {{ session('error') }}
+                </div>
+            @endif
             <a href="{{ route('users.create') }}" class="btn btn-primary mb-3">Ajouter un utilisateur</a>
+            
+            <!-- Formulaire de recherche -->
+            {{-- <form action="{{ route('user.search') }}" method="GET" class="mb-3">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control" placeholder="Rechercher un utilisateur" value="{{ request('search') }}">
+                    <button class="btn btn-primary" type="submit">Rechercher</button>
+                </div>
+            </form> --}}
+            <!-- Formulaire de recherche -->
+<!-- Formulaire de recherche -->
+<!-- Formulaire de recherche -->
+<form action="{{ route('user.search') }}" method="GET" class="mb-4">
+    <div class="d-flex align-items-center">
+        <!-- Input de recherche avec fond gris -->
+        <div class="position-relative flex-grow-1">
+            <input 
+                type="text" 
+                name="search" 
+                class="form-control form-control-lg bg-light border-secondary rounded-pill shadow-sm" 
+                placeholder="Rechercher un utilisateur" 
+                value="{{ request('search') }}"
+                aria-label="Rechercher un utilisateur"
+            >
+            <span class="position-absolute top-50 end-0 translate-middle-y me-3">
+                <i class="fas fa-search text-muted"></i>
+            </span>
+        </div>
+        <!-- Bouton de recherche -->
+        <button 
+            class="btn btn-primary btn-lg ms-2 rounded-pill shadow" 
+            type="submit"
+        >
+            Rechercher
+        </button>
+    </div>
+</form>
+
+
+
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>

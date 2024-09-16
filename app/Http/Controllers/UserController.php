@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+
+  public function search(Request $request)    {
+    $query = $request->input('search');
+    $users = User::search($query)->get();
+     return view('users.index', ['users' => $users]);
+    }
   
   public function index()
   {

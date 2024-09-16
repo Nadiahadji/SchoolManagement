@@ -21,11 +21,12 @@ return new class extends Migration
             $table->string('tel')->nullable();
             $table->string('tel_parent');
             $table->string('niv');
+            $table->string('adresse');
             $table->date('date_naissance')->nullable();
             $table->date('date_inscription');
             $table->integer('offre');
-            // $table->integer('versement');
-            // $table->integer('reste');
+            $table->integer('versement')->nullable();
+            $table->integer('reste')->nullable();
             $table->timestamps();
         });
     }

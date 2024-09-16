@@ -20,26 +20,39 @@
 
             <a class="nav-link" href="/eleves">
                 <div class="sb-nav-link-icon">
-                    <img src="{{asset('images/icons/student.webp')}}" width="25px">              
+                    <img src="{{asset('images/icons/students.png')}}" width="25px">              
 
  </div>
-                Condidats
+                Eleves
             </a>
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="/formations">
                 <div class="sb-nav-link-icon">
                     <img src="{{asset('images/icons/dip.webp')}}" width="25px">              
                  </div>
                 Formations
             </a>
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="/formateurs">
                 <div class="sb-nav-link-icon">
                     <img src="{{asset('images/icons/tech.webp')}}" width="25px">              
                  </div>
                 Formateurs
             </a>
+            <a class="nav-link" href="/condidats">
+                <div class="sb-nav-link-icon">
+                    <img src="{{asset('images/icons/student.webp')}}" width="25px">              
 
+ </div>
+                Condidats
+            </a>
+            <a class="nav-link" href="/paiements">
+                <div class="sb-nav-link-icon">
+                    <img src="{{asset('images/pay2.png')}}" width="25px">              
+
+ </div>
+                Paiements condidats
+            </a>
             <div class="sb-sidenav-menu-heading">Dépenses</div>
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="/achats">
                 <div class="sb-nav-link-icon">
                     <img src="{{asset('images/icons/moneyy.webp')}}" width="25px">              
                  </div>
